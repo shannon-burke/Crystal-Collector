@@ -1,0 +1,32 @@
+#title {
+    text-align: center
+}
+
+p {
+    font-family: 'Muli', sans-serif;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+/* This was my first attempt at the image hover swapping. Obviously, it didn't work and I found another solution
+
+#crystal1-img {
+    background-image: url('assets/images/crystal1.svg') no-repeat;
+    display: inline-block;
+ }
+ 
+ #crystal1-img:hover {
+    background-image: url('assets/images/crystal2.svg');
+ }
+ */
+
+ .crystal-img img:last-child {
+    display: none;  
+  }
+  .crystal-img:hover img:last-child {
+    display: block;  
+  }
+  .crystal-img:hover img:first-child {
+    display: none;  
+  }
