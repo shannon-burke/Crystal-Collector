@@ -10,64 +10,68 @@ $("#wins").text("Succesful days: " + wins);
 var losses = 0;
 $("#losses").text("Ripped bags: " + losses);
 
-function winFunction() {
+var a = Math.floor(Math.random() * 12 + 1);
+var b = Math.floor(Math.random() * 12 + 1);
+var c = Math.floor(Math.random() * 12 + 1);
+var d = Math.floor(Math.random() * 12 + 1);
+console.log(a, b, c, d);
+
+function winOrLossFunction() {
+    if (currentScore === targetNumber) {
+        currentScore = 0;
+        targetNumber = Math.floor(Math.random() * 101 + 19);
+        wins += 1;
+
+        a = Math.floor(Math.random() * 12 + 1);
+        b = Math.floor(Math.random() * 12 + 1);
+        c = Math.floor(Math.random() * 12 + 1);
+        d = Math.floor(Math.random() * 12 + 1);
+        console.log(a, b, c, d);
+    };
+
+    if (currentScore > targetNumber) {
+        currentScore = 0;
+        targetNumber = Math.floor(Math.random() * 101 + 19);
+        losses += 1;
+
+        a = Math.floor(Math.random() * 12 + 1);
+        b = Math.floor(Math.random() * 12 + 1);
+        c = Math.floor(Math.random() * 12 + 1);
+        d = Math.floor(Math.random() * 12 + 1);
+        console.log(a, b, c, d);
+    };
+
+    $("#number-to-guess").text(targetNumber);
+    $("#current-score").text(currentScore);
+    $("#wins").text("Succesful days: " + wins);
+    $("#losses").text("Ripped bags: " + losses);
 
 };
 
 $("#crystal1").on("click", function () {
-    currentScore += 1;
+    currentScore += a;
     console.log(currentScore);
     $("#current-score").text(currentScore);
-
-    if (currentScore === targetNumber) {
-        currentScore = 0;
-        targetNumber = Math.floor(Math.random() * 101 + 19);
-        wins += 1;
-        $("#current-score").text(currentScore);
-        $("#number-to-guess").text(targetNumber);
-        $("#wins").text("Succesful days: " + wins);
-    };
+    winOrLossFunction();
 });
 
 $("#crystal2").on("click", function () {
-    currentScore += 2;
+    currentScore += b;
     console.log(currentScore);
     $("#current-score").text(currentScore);
-
-    if (currentScore === targetNumber) {
-        currentScore = 0;
-        targetNumber = Math.floor(Math.random() * 101 + 19);
-        wins += 1;
-        $("#wins").text("Succesful days: " + wins);
-    };
+    winOrLossFunction();
 });
 
 $("#crystal3").on("click", function () {
-    currentScore += 3;
+    currentScore += c;
     console.log(currentScore);
     $("#current-score").text(currentScore);
-
-    if (currentScore === targetNumber) {
-        currentScore = 0;
-        targetNumber = Math.floor(Math.random() * 101 + 19);
-        wins += 1;
-        $("#wins").text("Succesful days: " + wins);
-    };
+    winOrLossFunction();
 });
 
 $("#crystal4").on("click", function () {
-    currentScore += 10;
+    currentScore += d;
     console.log(currentScore);
     $("#current-score").text(currentScore);
-
-    if (currentScore === targetNumber) {
-        currentScore = 0;
-        targetNumber = Math.floor(Math.random() * 101 + 19);
-        wins += 1;
-        $("#wins").text("Succesful days: " + wins);
-    };
-
-
+    winOrLossFunction();
 });
-
-
