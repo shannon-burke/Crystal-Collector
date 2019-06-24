@@ -1,5 +1,9 @@
 #title {
-    text-align: center
+    text-align: center;
+    padding: 15px;
+    background-color: #591541;
+    color: #f2f2f2;
+    margin-top: 10px;
 }
 
 p {
@@ -8,7 +12,48 @@ p {
 
 h1 {
     font-family: 'Lobster', cursive;
+    font-size: 75px;
 }
+
+#instructions {
+    background-color: #a6859a;
+    padding-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+    color: #591541;
+}
+
+body {
+    background-color: #d9c7d3;
+}
+
+#gems {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#bag-capacity {
+    background-color: #591541
+}
+
+#current-bag-weight {
+    background-color: #8c5479
+}
+
+#score {
+    background-color: #a6859a;
+}
+
+#counters {
+    color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+
+
+
+
 /* This was my first attempt at the image hover swapping. Obviously, it didn't work and I found another solution
 
 #crystal1-img {
